@@ -1,14 +1,14 @@
 <template>
-  <div id="app">
+  <div class="app">
     <div class="row title">
       <img src="../resources/logo.png" class="title"/>
     </div>
 
     <div class="row pokeballs">
       <div class="col-md-5 dexball">
-        <div class="btn" id="viewDex">
+        <a href="/pokedex" class="btn" id="viewDex">
           <img src="../resources/dexball.png" class="pokeball-dex"/>
-        </div>
+        </a>
       </div>
 
       <div class="col-md-2">
@@ -51,10 +51,7 @@
 </template>
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+  name: 'HelloWorld'
 }
 </script>
 

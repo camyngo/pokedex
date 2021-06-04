@@ -1,16 +1,18 @@
 import Vue from 'vue'
 import App from './App.vue'
 import './resources/app.css'
+import VueRouter from 'vue-router';
+import router from './router/index.js'
 // include boostrap
 import BootstrapVue from "bootstrap-vue"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
 
 Vue.config.productionTip = false
-
-// and use boostrap
+Vue.use(VueRouter);
 Vue.use(BootstrapVue)
 
 new Vue({
+    router,
   render: h => h(App),
 }).$mount('#app')
