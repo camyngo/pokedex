@@ -1,0 +1,883 @@
+[{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20a1"
+  },
+  "id": 12,
+  "name": "Absorb",
+  "type": "Grass",
+  "power": 20,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20a2"
+  },
+  "id": 13,
+  "name": "Acid",
+  "type": "Poison",
+  "power": 40,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20a3"
+  },
+  "id": 14,
+  "name": "Aurora Beam",
+  "type": "Ice",
+  "power": 65,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20a5"
+  },
+  "id": 16,
+  "name": "Bind",
+  "type": "Normal",
+  "power": 15,
+  "accuracy": 85
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20a4"
+  },
+  "id": 15,
+  "name": "Barrage",
+  "type": "Normal",
+  "power": 15,
+  "accuracy": 85
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20a6"
+  },
+  "id": 17,
+  "name": "Blizzard",
+  "type": "Ice",
+  "power": 110,
+  "accuracy": 70
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20aa"
+  },
+  "id": 21,
+  "name": "Boomerang",
+  "type": "Ground",
+  "power": 50,
+  "accuracy": 90
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20a8"
+  },
+  "id": 19,
+  "name": "Body Slam",
+  "type": "Normal",
+  "power": 85,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20ac"
+  },
+  "id": 23,
+  "name": "Bubble Beam",
+  "type": "Water",
+  "power": 65,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20ae"
+  },
+  "id": 25,
+  "name": "Comet Punch",
+  "type": "Normal",
+  "power": 18,
+  "accuracy": 85
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20b1"
+  },
+  "id": 28,
+  "name": "Crabhammer",
+  "type": "Water",
+  "power": 100,
+  "accuracy": 90
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20a7"
+  },
+  "id": 18,
+  "name": "Bite",
+  "type": "Normal",
+  "power": 60,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20b0"
+  },
+  "id": 27,
+  "name": "Constrict",
+  "type": "Normal",
+  "power": 10,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20ad"
+  },
+  "id": 24,
+  "name": "Clamp",
+  "type": "Water",
+  "power": 35,
+  "accuracy": 85
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20a9"
+  },
+  "id": 20,
+  "name": "Bone Club",
+  "type": "Ground",
+  "power": 65,
+  "accuracy": 85
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20af"
+  },
+  "id": 26,
+  "name": "Confusion",
+  "type": "Psychic",
+  "power": 50,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20ab"
+  },
+  "id": 22,
+  "name": "Bubble",
+  "type": "Water",
+  "power": 40,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20b2"
+  },
+  "id": 29,
+  "name": "Cut",
+  "type": "Normal",
+  "power": 50,
+  "accuracy": 95
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20b4"
+  },
+  "id": 31,
+  "name": "Dizzy Punch",
+  "type": "Normal",
+  "power": 70,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20b5"
+  },
+  "id": 32,
+  "name": "Double Kick",
+  "type": "Fighting",
+  "power": 30,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20b3"
+  },
+  "id": 30,
+  "name": "Dig",
+  "type": "Ground",
+  "power": 80,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20b9"
+  },
+  "id": 36,
+  "name": "Drill Peck",
+  "type": "Flying",
+  "power": 80,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20b8"
+  },
+  "id": 35,
+  "name": "Dream Eater",
+  "type": "Psychic",
+  "power": 100,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20bb"
+  },
+  "id": 38,
+  "name": "Egg Bomb",
+  "type": "Normal",
+  "power": 100,
+  "accuracy": 75
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20bf"
+  },
+  "id": 42,
+  "name": "Fire Punch",
+  "type": "Fire",
+  "power": 75,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20bd"
+  },
+  "id": 40,
+  "name": "Explosion",
+  "type": "Normal",
+  "power": 250,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20c1"
+  },
+  "id": 44,
+  "name": "Flamethrower",
+  "type": "Fire",
+  "power": 90,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20b7"
+  },
+  "id": 34,
+  "name": "Double Edge",
+  "type": "Normal",
+  "power": 120,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20c0"
+  },
+  "id": 43,
+  "name": "Fire Spin",
+  "type": "Fire",
+  "power": 35,
+  "accuracy": 85
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20ba"
+  },
+  "id": 37,
+  "name": "Earthquake",
+  "type": "Ground",
+  "power": 100,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20bc"
+  },
+  "id": 39,
+  "name": "Ember",
+  "type": "Fire",
+  "power": 40,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20c2"
+  },
+  "id": 45,
+  "name": "Fly",
+  "type": "Flying",
+  "power": 90,
+  "accuracy": 95
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20b6"
+  },
+  "id": 33,
+  "name": "Double Slap",
+  "type": "Normal",
+  "power": 15,
+  "accuracy": 85
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20be"
+  },
+  "id": 41,
+  "name": "Fire Blast",
+  "type": "Fire",
+  "power": 110,
+  "accuracy": 85
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20c5"
+  },
+  "id": 48,
+  "name": "Gust",
+  "type": "Flying",
+  "power": 40,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20d1"
+  },
+  "id": 60,
+  "name": "Lick",
+  "type": "Ghost",
+  "power": 30,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20cb"
+  },
+  "id": 54,
+  "name": "Hyper Fang",
+  "type": "Normal",
+  "power": 80,
+  "accuracy": 90
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20ca"
+  },
+  "id": 53,
+  "name": "Hyper Beam",
+  "type": "Normal",
+  "power": 150,
+  "accuracy": 90
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20d4"
+  },
+  "id": 63,
+  "name": "Mega Punch",
+  "type": "Normal",
+  "power": 80,
+  "accuracy": 85
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20d8"
+  },
+  "id": 67,
+  "name": "Petal Dance",
+  "type": "Grass",
+  "power": 120,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20cc"
+  },
+  "id": 55,
+  "name": "Ice Beam",
+  "type": "Ice",
+  "power": 90,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20dc"
+  },
+  "id": 71,
+  "name": "Psychic",
+  "type": "Psychic",
+  "power": 90,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20c3"
+  },
+  "id": 46,
+  "name": "Fury Attack",
+  "type": "Normal",
+  "power": 15,
+  "accuracy": 85
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20d0"
+  },
+  "id": 59,
+  "name": "Leech Life",
+  "type": "Bug",
+  "power": 20,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20d3"
+  },
+  "id": 62,
+  "name": "Mega Kick",
+  "type": "Normal",
+  "power": 120,
+  "accuracy": 75
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20c4"
+  },
+  "id": 47,
+  "name": "Fury Swipes",
+  "type": "Normal",
+  "power": 18,
+  "accuracy": 80
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20c9"
+  },
+  "id": 52,
+  "name": "Hydro Pump",
+  "type": "Water",
+  "power": 110,
+  "accuracy": 80
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20ce"
+  },
+  "id": 57,
+  "name": "Jump Kick",
+  "type": "Fighting",
+  "power": 100,
+  "accuracy": 95
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20d9"
+  },
+  "id": 68,
+  "name": "Poison Sting",
+  "type": "Poison",
+  "power": 15,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20d7"
+  },
+  "id": 66,
+  "name": "Pin Missile",
+  "type": "Bug",
+  "power": 25,
+  "accuracy": 95
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20db"
+  },
+  "id": 70,
+  "name": "Psybeam",
+  "type": "Psychic",
+  "power": 65,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20df"
+  },
+  "id": 74,
+  "name": "Razor Leaf",
+  "type": "Grass",
+  "power": 55,
+  "accuracy": 95
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20dd"
+  },
+  "id": 72,
+  "name": "Quick Attack",
+  "type": "Normal",
+  "power": 40,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20d5"
+  },
+  "id": 64,
+  "name": "Pay Day",
+  "type": "Normal",
+  "power": 40,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20c7"
+  },
+  "id": 50,
+  "name": "High Jump Kick",
+  "type": "Fighting",
+  "power": 130,
+  "accuracy": 90
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20cd"
+  },
+  "id": 56,
+  "name": "Ice Punch",
+  "type": "Ice",
+  "power": 75,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20cf"
+  },
+  "id": 58,
+  "name": "Karate Chop",
+  "type": "Fighting",
+  "power": 50,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20d6"
+  },
+  "id": 65,
+  "name": "Peck",
+  "type": "Flying",
+  "power": 35,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20c8"
+  },
+  "id": 51,
+  "name": "Horn Attack",
+  "type": "Normal",
+  "power": 65,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20c6"
+  },
+  "id": 49,
+  "name": "Headbutt",
+  "type": "Normal",
+  "power": 70,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20d2"
+  },
+  "id": 61,
+  "name": "Mega Drain",
+  "type": "Grass",
+  "power": 40,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20da"
+  },
+  "id": 69,
+  "name": "Pound",
+  "type": "Normal",
+  "power": 40,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20de"
+  },
+  "id": 73,
+  "name": "Rage",
+  "type": "Normal",
+  "power": 20,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20e5"
+  },
+  "id": 80,
+  "name": "Self-Destruct",
+  "type": "Normal",
+  "power": 200,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20e8"
+  },
+  "id": 83,
+  "name": "Slam",
+  "type": "Normal",
+  "power": 80,
+  "accuracy": 75
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20e0"
+  },
+  "id": 75,
+  "name": "Razor Wind",
+  "type": "Normal",
+  "power": 80,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20f4"
+  },
+  "id": 95,
+  "name": "Tackle",
+  "type": "Normal",
+  "power": 50,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20fd"
+  },
+  "id": 104,
+  "name": "Vice Grip",
+  "type": "Normal",
+  "power": 55,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20ed"
+  },
+  "id": 88,
+  "name": "Spike Cannon",
+  "type": "Normal",
+  "power": 20,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20ee"
+  },
+  "id": 89,
+  "name": "Stomp",
+  "type": "Normal",
+  "power": 65,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20f7"
+  },
+  "id": 98,
+  "name": "Thunder",
+  "type": "Electric",
+  "power": 110,
+  "accuracy": 70
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20e2"
+  },
+  "id": 77,
+  "name": "Rock Throw",
+  "type": "Rock",
+  "power": 50,
+  "accuracy": 90
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20f3"
+  },
+  "id": 94,
+  "name": "Swift",
+  "type": "Normal",
+  "power": 60,
+  "accuracy": 999
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20fc"
+  },
+  "id": 103,
+  "name": "Twineedle",
+  "type": "Bug",
+  "power": 25,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20fe"
+  },
+  "id": 105,
+  "name": "Vine Whip",
+  "type": "Grass",
+  "power": 45,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20fb"
+  },
+  "id": 102,
+  "name": "Tri Attack",
+  "type": "Normal",
+  "power": 80,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20ec"
+  },
+  "id": 87,
+  "name": "Solar Beam",
+  "type": "Grass",
+  "power": 120,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20f5"
+  },
+  "id": 96,
+  "name": "Take Down",
+  "type": "Normal",
+  "power": 90,
+  "accuracy": 85
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20e6"
+  },
+  "id": 81,
+  "name": "Skull Bash",
+  "type": "Normal",
+  "power": 130,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20f6"
+  },
+  "id": 97,
+  "name": "Thrash",
+  "type": "Normal",
+  "power": 120,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20fa"
+  },
+  "id": 101,
+  "name": "Thunderbolt",
+  "type": "Electric",
+  "power": 90,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20e3"
+  },
+  "id": 78,
+  "name": "Rolling Kick",
+  "type": "Fighting",
+  "power": 60,
+  "accuracy": 85
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20eb"
+  },
+  "id": 86,
+  "name": "Smog",
+  "type": "Poison",
+  "power": 30,
+  "accuracy": 70
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20f8"
+  },
+  "id": 99,
+  "name": "Thunder Punch",
+  "type": "Electric",
+  "power": 75,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20f1"
+  },
+  "id": 92,
+  "name": "Submission",
+  "type": "Fighting",
+  "power": 80,
+  "accuracy": 80
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20e4"
+  },
+  "id": 79,
+  "name": "Scratch",
+  "type": "Normal",
+  "power": 40,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20f0"
+  },
+  "id": 91,
+  "name": "Struggle",
+  "type": "Normal",
+  "power": 50,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20f9"
+  },
+  "id": 100,
+  "name": "Thunder Shock",
+  "type": "Electric",
+  "power": 40,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20e1"
+  },
+  "id": 76,
+  "name": "Rock Slide",
+  "type": "Rock",
+  "power": 75,
+  "accuracy": 90
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20e7"
+  },
+  "id": 82,
+  "name": "Sky Attack",
+  "type": "Flying",
+  "power": 140,
+  "accuracy": 90
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20f2"
+  },
+  "id": 93,
+  "name": "Surf",
+  "type": "Water",
+  "power": 90,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20e9"
+  },
+  "id": 84,
+  "name": "Slash",
+  "type": "Normal",
+  "power": 70,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20ea"
+  },
+  "id": 85,
+  "name": "Sludge",
+  "type": "Poison",
+  "power": 65,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20ef"
+  },
+  "id": 90,
+  "name": "Strength",
+  "type": "Normal",
+  "power": 80,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a20ff"
+  },
+  "id": 106,
+  "name": "Water Gun",
+  "type": "Water",
+  "power": 40,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a2101"
+  },
+  "id": 108,
+  "name": "Wing Attack",
+  "type": "Flying",
+  "power": 60,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a2100"
+  },
+  "id": 107,
+  "name": "Waterfall",
+  "type": "Water",
+  "power": 80,
+  "accuracy": 100
+},{
+  "_id": {
+    "$oid": "60b2ba3a5b6cf304857a2102"
+  },
+  "id": 109,
+  "name": "Wrap",
+  "type": "Normal",
+  "power": 15,
+  "accuracy": 90
+}]
