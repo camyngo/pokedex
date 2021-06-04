@@ -3,7 +3,7 @@
     <div class="row title">
       <img src="../resources/logo.png" class="title"/>
     </div>
-
+    <b-container class="bv-example-row">
     <div class="row pokeballs">
       <div class="col-md-5 dexball">
         <a href="/pokedex" class="btn" id="viewDex">
@@ -38,6 +38,7 @@
       </div>
 
     </div>
+    </b-container>
     <br/>
     <footer class="footerDeco">
       <div class="credits-footer">
