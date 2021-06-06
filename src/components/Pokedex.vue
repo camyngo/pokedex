@@ -1,17 +1,16 @@
 <template>
   <div class="pokedex-background">
     <b-container class="bv-example-row">
-    <div class="row filters">
-      <div class="col-md-4">
-        <form @submit="searchMoves" method="post">
-          <br/>
+      <div class="row filters">
+        <div class="col-md-4">
+          <br />
           <h2 class="heading">Search By Move</h2>
-          <select v-model="selected" type='text' size="10">
-            <option value=0 selected>All Pokemon</option>
+          <select v-model="selectedMove" type="text" size="10">
+            <option value="0" selectedMove>All Pokemon</option>
             <option v-for="move in uniqueMoves" v-bind:key="move">{{move}}</option>
           </select>
-          <br>
-          <b-button pill type="submit" class="btn btn-danger submitSearch">
+          <br />
+          <b-button @click="searchByMove" pill class="btn btn-danger submitSearch">
             <span>
               <b class="glyphicon glyphicon glyphicon-search"></b>
               <b class="glyphicon glyphicon glyphicon-king"></b>
@@ -19,31 +18,32 @@
               <b class="glyphicon glyphicon glyphicon-knight"></b>
             </span>
           </b-button>
-        </form>
-      </div>
-
-      <div class="col-md-4 top-center">
-
-        <br/>
-        <div class="row pokedex-title">
-          <h1>The Complete Pokedex</h1>
-          <h2>Original 151</h2>
         </div>
 
-        <div class="row">
-          <form @submit="searchName" method="post">
-            <input id="name" v-model="name" name="name" type="text" autocomplete="off" required>
-            <b-button pill @click="searchName" type="submit" value="Submit" class="btn btn-success" id="nameSearch">Search Pok&eacute;mon By Name</b-button>
-          </form>
-        </div>
-      </div>
+        <div class="col-md-4 top-center">
+          <br />
+          <div class="row pokedex-title">
+            <h1>The Complete Pokedex</h1>
+            <h2>Original 151</h2>
+          </div>
 
-      <div class="col-md-4">
-        <br/>
-        <form @submit="searchTypes" method="post">
+          <div class="row">
+            <input id="name" v-model="name" name="name" type="text" autocomplete="off" />
+            <b-button
+              @click="searchByName"
+              pill
+              value="Submit"
+              class="btn btn-success"
+              id="nameSearch"
+            >Search Pok&eacute;mon By Name</b-button>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <br />
           <h2 class="heading">Search By Type</h2>
-          <select type='text' v-model="types" size="10">
-            <option value="All" selected>All Pokemon</option>
+          <select type="text" v-model="selectedType" size="10">
+            <option value="All">All Pokemon</option>
             <option value="Grass">Grass</option>
             <option value="Fire">Fire</option>
             <option value="Water">Water</option>
@@ -60,8 +60,8 @@
             <option value="Ice">Ice</option>
             <option value="Dragon">Dragon</option>
           </select>
-          <br>
-          <b-button pill type="submit" class="btn btn-danger submitSearch">
+          <br />
+          <b-button pill @click="searchByType" class="btn btn-danger submitSearch">
             <span>
               <b class="glyphicon glyphicon glyphicon-search"></b>
               <b class="glyphicon glyphicon glyphicon-leaf"></b>
@@ -69,107 +69,126 @@
               <b class="glyphicon glyphicon glyphicon-tint"></b>
             </span>
           </b-button>
-        </form>
-      </div>
-<!--      display pokedex database-->
-      <div class="container">
+        </div>
+
+        <!--      display pokedex database-->
+        <div class="container">
           <div class="row list">
-              <div v-for="(pokemon, position) in pokemons" v-bind:key="position">
-                <b-container class="bv-example-row">
-                <div class = "col-md-3">
-<!--                  <a :href="require(`./public/pokemon`)" class="link"/>-->
-                  <div class = "pokebox">
-                    <h1>#{{ pokemon.id }} </h1>
-                    <h1>{{ pokemon.name }} </h1>
-                    <img :src="require(`../resources/pokemon/${pokemon.name}.gif`)">
+            <div v-for="(pokemon, position) in searchResults" v-bind:key="position">
+              <b-container class="bv-example-row">
+                <div class="col-md-3">
+                  <!--                  <a :href="require(`./public/pokemon`)" class="link"/>-->
+                  <div class="pokebox">
+                    <h1>#{{ pokemon.id }}</h1>
+                    <h1>{{ pokemon.name }}</h1>
+                    <img :src="require(`../resources/pokemon/${pokemon.name}.gif`)" />
                   </div>
                 </div>
-                </b-container>
-              </div>
+              </b-container>
+            </div>
           </div>
+        </div>
       </div>
-
-    </div>
     </b-container>
 
-
-
     <footer class="footerDeco">
-      <br>
+      <br />
       <a href="/" class="btn btn-info home">Back To Home</a>
-      <br>
+      <br />
     </footer>
-    </div>
+  </div>
 </template>
 
 <script>
-    import {getAlldatabase} from "../json/importScript";
-    export default {
-        name: 'Pokedex',
-        data() {
-            return {
-                pokemons: [],
-                moves:[],
-                list:[],
-                name: '',
-                selected: '',
-                types:''
+import { getAlldatabase } from "../json/importScript";
+export default {
+  name: "Pokedex",
+  data() {
+    return {
+      pokemons: [],
+      searchResults: [],
+      moves: [],
+      name: "",
+      selectedMove: "",
+      selectedType: "",
+      display: Boolean
+    };
+  },
+  async created() {
+    const retrievedPokemons = await getAlldatabase();
+    this.pokemons = [...retrievedPokemons];
+    this.searchResults = [...retrievedPokemons];
+    this.displayAll();
+  },
+  computed: {
+    uniqueMoves() {
+      return this.pokemons
+        .reduce((moves, pokemon) => {
+          pokemon.moves_pokemons.forEach(({ moves: [{ name }] }) => {
+            if (!moves.includes(name)) {
+              moves.push(name);
             }
-        },
-        async created() {
-            this.pokemons = await getAlldatabase();
-        },
-        computed: {
-          uniqueMoves() {
-            return this.pokemons.reduce((moves, pokemon) => {
-              pokemon.moves_pokemons.forEach(({ moves: [{ name }] }) => {
-                if(!moves.includes(name)) {
-                  moves.push(name)
-                }
-              })
-              return moves
-            }, []).sort()
-          },
-          searchName(){
-              let list = this.pokemons;
-              let result = this.name.toLowerCase()
-              if( result != '' && result) {
-                result = list.filter((pokemon) => {
-                  return pokemon.name.toLowerCase()
-                          .includes(result)
-                })
-              }
-              // result = this.name.charAt(0).toUpperCase() + result.slice(1);
-              return result
-          },
-          searchMoves(){
-                let list = this.pokemons
-                
-                return list;
-          },
-          searchTypes(){
-            let list = this.pokemons;
-            let result = this.types;
-            if( result != '' && result) {
-              result = list.filter((pokemon) => {
-                return pokemon.type_1.includes(result) || pokemon.type_2.includes(result)
-              })
-            }
-            return result;
-          }
-        }
+          });
+          return moves;
+        }, [])
+        .sort();
+    },
+    searchMoves() {
+      let list = this.pokemons;
+      let result = this.selectedMove;
+      if (result != "" && result) {
+        result = list.filter(pokemon => {
+          return pokemon.moves_pokemons;
+        });
+      }
+      return result;
     }
+  },
+  methods: {
+    displayAll() {
+      if (this.name != "" || this.selectedMove != "" || this.selectedType != "")
+        this.display = false;
+      else this.display = true;
+      return this.display;
+    },
+    searchByType() {
+      if (this.selectedType === "All") {
+        this.searchResults = [...this.pokemons];
+      } else {
+        this.searchResults = this.pokemons.filter(pokemon =>
+          [pokemon.type_1, pokemon.type_2].includes(this.selectedType)
+        );
+      }
+    },
+    searchByName() {
+      this.searchResults = this.pokemons.filter(pokemon =>
+        pokemon.name.toLowerCase().includes(this.name.toLowerCase())
+      );
+    },
+    searchByMove() {
+      if (this.selectedMove === "0") {
+        this.searchResults = [...this.pokemons];
+      } else {
+        this.searchResults = this.pokemons.filter(({ moves_pokemons }) =>
+          moves_pokemons.some(
+            ({ moves: [{ name }] }) => name === this.selectedMove
+          )
+        );
+      }
+    }
+  }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  body{
-    font-size: 2rem;
-  }
-  /*.list{*/
-  /*  display: flex;*/
-  /*  align-items: center;*/
-  /*  flex-flow: row nowrap;*/
-  /*  overflow: auto;*/
-  /*}*/
+body {
+  font-size: 2rem;
+}
+/*.list{*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  flex-flow: row nowrap;*/
+/*  overflow: auto;*/
+/*}*/
 </style>
