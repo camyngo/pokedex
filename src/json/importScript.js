@@ -10,7 +10,9 @@ export async function importAllPokemons() {
 export async function getAlldatabase(){
     var pokedex = db.collection("pokemon");
     const querySnapshot = await pokedex.get()
-    return querySnapshot.docs.map(doc => doc.data())
+    return querySnapshot.docs.map(doc => doc.data()).sort((a, b) => {
+      return a.id - b.id
+    })
 }
 
 

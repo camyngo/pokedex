@@ -3,14 +3,12 @@
     <b-container class="bv-example-row">
     <div class="row filters">
       <div class="col-md-4">
-        <form action="/pokedex/move-search" method="post">
+        <form @submit.prevent.stop="searchMoves" >
           <br/>
           <h2 class="heading">Search By Move</h2>
-          <select multiple id='moveId' name='moveId' type='text'>
+          <select multiple v-model="selected" type='text'>
             <option value=0 selected>All Pokemon</option>
-            #foreach($move in $moves)
-            <option value=$move.getId()>$move.getName()</option>
-            #end
+            <option v-for="move in uniqueMoves" v-bind:key="move">{{move}}</option>
           </select>
           <br>
           <b-button pill type="submit" class="btn btn-danger submitSearch">
@@ -52,7 +50,7 @@
         <br/>
         <form action="/pokedex/type-search" method="post">
           <h2 class="heading">Search By Type</h2>
-          <select multiple id='typeId' name='typeId' type='text'>
+          <select multiple type='text'>
             <option value="All" selected>All Pokemon</option>
             <option value="Grass">Grass</option>
             <option value="Fire">Fire</option>
@@ -83,21 +81,19 @@
       </div>
 <!--      display pokedex database-->
       <div class="container">
-          <div class="row">
-            <div class="col">
-              <section v-for="(pokemon, position) in pokemons" v-bind:key="position">
+          <div class="row list">
+              <div v-for="(pokemon, position) in pokemons" v-bind:key="position">
                 <b-container class="bv-example-row">
                 <div class = "col-md-3">
-                  <a href="../resources/pokemon/{pokemon.id}" class="link"/>
+<!--                  <a :href="require(`./public/pokemon`)" class="link"/>-->
                   <div class = "pokebox">
                     <h1>#{{ pokemon.id }} </h1>
                     <h1>{{ pokemon.name }} </h1>
-                    <img src=../resources/pokemon/Aerodactyl.gif>
+                    <img :src="require(`../resources/pokemon/${pokemon.name}.gif`)">
                   </div>
                 </div>
                 </b-container>
-              </section>
-            </div>
+              </div>
           </div>
       </div>
 
@@ -120,11 +116,25 @@
         name: 'Pokedex',
         data() {
             return {
-                pokemons: []
+                pokemons: [],
+                moves:[],
+                selected: null
             }
         },
         async created() {
             this.pokemons = await getAlldatabase();
+        },
+        computed: {
+          uniqueMoves() {
+            return this.pokemons.reduce((moves, pokemon) => {
+              pokemon.moves_pokemons.forEach(({ moves: [{ name }] }) => {
+                if(!moves.includes(name)) {
+                  moves.push(name)
+                }
+              })
+              return moves
+            }, []).sort()
+          }
         },
         methods: {
             displaybyID(key){
@@ -132,6 +142,11 @@
                     return pokemon['id'] ==  key;
                 })
             },
+            searchMoves(){
+                let result = this.pokemons
+                result = result.filter((pokemon) => {return (pokemon.moves_pokemons)})
+                return result;
+            }
         }
     }
 </script>
@@ -141,4 +156,10 @@
   body{
     font-size: 2rem;
   }
+  /*.list{*/
+  /*  display: flex;*/
+  /*  align-items: center;*/
+  /*  flex-flow: row nowrap;*/
+  /*  overflow: auto;*/
+  /*}*/
 </style>
