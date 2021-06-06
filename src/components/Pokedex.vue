@@ -31,14 +31,14 @@
         </div>
 
         <div class="row">
-          <form action="/pokedex/name-search" method="post">
-            <input id="name" name="name" type="text" autocomplete="off" required>
-            <b-button pill type="submit" class="btn btn-success" id="nameSearch">Search Pok&eacute;mon By Name</b-button>
+          <form @submit="searchName" method="post">
+            <input id="name" v-model="name" name="name" type="text" autocomplete="off" required>
+            <b-button pill @click="searchName" type="submit" value="Submit" class="btn btn-success" id="nameSearch">Search Pok&eacute;mon By Name</b-button>
           </form>
         </div>
 
         <div class="row">
-          <form action="/pokedex/strong-against-search" method="post">
+          <form  method="post">
             <input id="strongAgainst" name="strongAgainst" type="text" autocomplete="off" required>
             <b-button pill type="submit" class="btn btn-success" id="idealSearch">Enter Pok&eacute;mon For Its Ideal Foes</b-button>
           </form>
@@ -48,7 +48,7 @@
 
       <div class="col-md-4">
         <br/>
-        <form action="/pokedex/type-search" method="post">
+        <form method="post">
           <h2 class="heading">Search By Type</h2>
           <select multiple type='text'>
             <option value="All" selected>All Pokemon</option>
@@ -118,7 +118,9 @@
             return {
                 pokemons: [],
                 moves:[],
-                selected: null
+                name: '',
+                selected: null,
+                list:[]
             }
         },
         async created() {
@@ -134,14 +136,21 @@
               })
               return moves
             }, []).sort()
+          },
+          searchName(){
+              let list = this.pokemons;
+              let result = this.name.toLowerCase()
+              if( result != '' && result) {
+                result = list.filter((pokemon) => {
+                  return pokemon.name.toLowerCase()
+                          .includes(result)
+                })
+              }
+              // result = this.name.charAt(0).toUpperCase() + result.slice(1);
+              return result
           }
         },
         methods: {
-            displaybyID(key){
-                return this.pokemons.filter((pokemon) => {
-                    return pokemon['id'] ==  key;
-                })
-            },
             searchMoves(){
                 let result = this.pokemons
                 result = result.filter((pokemon) => {return (pokemon.moves_pokemons)})
