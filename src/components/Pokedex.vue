@@ -3,10 +3,10 @@
     <b-container class="bv-example-row">
     <div class="row filters">
       <div class="col-md-4">
-        <form @submit.prevent.stop="searchMoves" >
+        <form @submit="searchMoves" method="post">
           <br/>
           <h2 class="heading">Search By Move</h2>
-          <select multiple v-model="selected" type='text'>
+          <select v-model="selected" type='text' size="10">
             <option value=0 selected>All Pokemon</option>
             <option v-for="move in uniqueMoves" v-bind:key="move">{{move}}</option>
           </select>
@@ -36,21 +36,13 @@
             <b-button pill @click="searchName" type="submit" value="Submit" class="btn btn-success" id="nameSearch">Search Pok&eacute;mon By Name</b-button>
           </form>
         </div>
-
-        <div class="row">
-          <form  method="post">
-            <input id="strongAgainst" name="strongAgainst" type="text" autocomplete="off" required>
-            <b-button pill type="submit" class="btn btn-success" id="idealSearch">Enter Pok&eacute;mon For Its Ideal Foes</b-button>
-          </form>
-        </div>
-
       </div>
 
       <div class="col-md-4">
         <br/>
-        <form method="post">
+        <form @submit="searchTypes" method="post">
           <h2 class="heading">Search By Type</h2>
-          <select multiple type='text'>
+          <select type='text' v-model="types" size="10">
             <option value="All" selected>All Pokemon</option>
             <option value="Grass">Grass</option>
             <option value="Fire">Fire</option>
@@ -118,9 +110,10 @@
             return {
                 pokemons: [],
                 moves:[],
+                list:[],
                 name: '',
-                selected: null,
-                list:[]
+                selected: '',
+                types:''
             }
         },
         async created() {
@@ -148,14 +141,22 @@
               }
               // result = this.name.charAt(0).toUpperCase() + result.slice(1);
               return result
-          }
-        },
-        methods: {
-            searchMoves(){
-                let result = this.pokemons
-                result = result.filter((pokemon) => {return (pokemon.moves_pokemons)})
-                return result;
+          },
+          searchMoves(){
+                let list = this.pokemons
+                
+                return list;
+          },
+          searchTypes(){
+            let list = this.pokemons;
+            let result = this.types;
+            if( result != '' && result) {
+              result = list.filter((pokemon) => {
+                return pokemon.type_1.includes(result) || pokemon.type_2.includes(result)
+              })
             }
+            return result;
+          }
         }
     }
 </script>
