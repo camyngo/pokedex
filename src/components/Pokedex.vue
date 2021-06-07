@@ -72,22 +72,19 @@
         </div>
 
         <!--      display pokedex database-->
-        <div class="container">
-          <div class="row list">
-            <div v-for="(pokemon, position) in searchResults" v-bind:key="position">
+        <b-container>
+          <b-row>
+            <b-col cols="3" v-for="(pokemon, position) in searchResults" v-bind:key="position">
               <b-container class="bv-example-row">
-                <div class="col-md-3">
-                  <!--                  <a :href="require(`./public/pokemon`)" class="link"/>-->
-                  <div class="pokebox">
-                    <h1>#{{ pokemon.id }}</h1>
-                    <h1>{{ pokemon.name }}</h1>
-                    <img :src="require(`../resources/pokemon/${pokemon.name}.gif`)" />
-                  </div>
+                <div class="pokebox">
+                  <h1>#{{ pokemon.id }}</h1>
+                  <h1>{{ pokemon.name }}</h1>
+                  <img :src="require(`../resources/pokemon/${pokemon.name}.gif`)" />
                 </div>
               </b-container>
-            </div>
-          </div>
-        </div>
+            </b-col>
+          </b-row>
+        </b-container>
       </div>
     </b-container>
 
