@@ -142,12 +142,6 @@ export default {
     }
   },
   methods: {
-    displayAll() {
-      if (this.name != "" || this.selectedMove != "" || this.selectedType != "")
-        this.display = false;
-      else this.display = true;
-      return this.display;
-    },
     searchByType() {
       if (this.selectedType === "All") {
         this.searchResults = [...this.pokemons];
