@@ -5,25 +5,26 @@
     </div>
     <b-container class="bv-example-row">
       <div class="row pokeballs">
+        <div class="col-md-3" />
+
         <div class="col-md-5 dexball">
           <a href="/pokedex" class="btn" id="viewDex">
             <img src="../resources/dexball.png" class="pokeball-dex" />
           </a>
         </div>
 
-        <!-- <div class="col-md-2">
-
-      </div>
-
-      <div class="col-md-5 battleball">
-        <div class="btn" id="battle">
-          <img src="../resources/battleball.png" class="pokeball-battle"/></div>
+        <!-- <div class="col-md-5 battleball">
+          <div class="btn" id="battle">
+            <img src="../resources/battleball.png" class="pokeball-battle" />
+          </div>
         </div>-->
       </div>
 
       <br />
 
       <div class="row labels">
+        <div class="col-md-3" />
+
         <div class="col-md-5 dexball-label">
           <p>
             Click the
@@ -31,12 +32,11 @@
           </p>
         </div>
 
-        <!-- <div class="col-md-2">
-
-      </div>
-
-      <div class="col-md-5 battleball-label">
-        <p>Click the <strong>purple Master Ball</strong> to jump right into the Pok&eacute;mon Arena!</p>
+        <!-- <div class="col-md-5 battleball-label">
+          <p>
+            Click the
+            <strong>purple Master Ball</strong> to jump right into the Pok&eacute;mon Arena!
+          </p>
         </div>-->
       </div>
     </b-container>
