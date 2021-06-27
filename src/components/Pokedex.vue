@@ -27,16 +27,14 @@
             <h2>Original 151</h2>
           </div>
 
-          <div class="row">
-            <input id="name" v-model="name" name="name" type="text" autocomplete="off" />
-            <b-button
-              @click="searchByName"
-              pill
-              value="Submit"
-              class="btn btn-success"
-              id="nameSearch"
-            >Search Pok&eacute;mon By Name</b-button>
-          </div>
+          <input id="name" v-model="name" name="name" type="text" autocomplete="off" />
+          <b-button
+            @click="searchByName"
+            pill
+            value="Submit"
+            class="btn btn-success"
+            id="nameSearch"
+          >Search Pok&eacute;mon By Name</b-button>
         </div>
 
         <div class="col-md-4">
