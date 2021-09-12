@@ -8,9 +8,9 @@
         <div class="col-md-3" />
 
         <div class="col-md-5 dexball">
-          <a href="/pokedex" class="btn" id="viewDex">
+          <router-link to="/pokedex" class="btn" id="viewDex">
             <img src="../resources/dexball.png" class="pokeball-dex" />
-          </a>
+          </router-link>
         </div>
 
         <!-- <div class="col-md-5 battleball">

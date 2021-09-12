@@ -88,7 +88,7 @@
 
     <footer class="footerDeco">
       <br />
-      <a href="/" class="btn btn-info home">Back To Home</a>
+      <router-link to="/" class="btn btn-info home">Back To Home</router-link>
       <br />
     </footer>
   </div>
